@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#1a1008">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Nora</title>
+<title>Noras Nummer</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -26,6 +26,7 @@ body {
   background: var(--dark);
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
+  touch-action: manipulation;
   touch-action: manipulation;
 }
 
@@ -147,7 +148,7 @@ h1 {
 .btn {
   position:relative; overflow:hidden;
   display:flex; align-items:center; justify-content:center;
-  width:100%; height:54px; padding:0 2rem 0 1.5rem;
+  width:100%; min-height:56px; padding:0 2rem 0 1.5rem;
   border-radius: 999px;
   background: rgba(255,255,255,0.06);
   backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
@@ -218,14 +219,22 @@ h1 {
   letter-spacing:0.1em;
 }
 
-@media (max-width:400px) {
-  h1 { font-size:2.6rem; }
-  .btn { height:48px; font-size:0.68rem; }
+@media (max-width:430px) {
+  h1 { font-size: 2.4rem; }
+  .av-wrap { width:95px; height:95px; }
+  .btns { max-width:100%; padding:0 0.25rem; }
+  .btn { height:54px; font-size:0.7rem; letter-spacing:0.18em; border-radius:999px; }
+  .btn svg { width:16px; height:16px; }
+  .loc { font-size:0.65rem; }
 }
-@media (max-height:640px) {
-  .av-wrap { width:88px; height:88px; }
-  h1 { font-size:2.4rem; }
-  .btns { gap:0.45rem; }
+@media (max-height:650px) {
+  .av-wrap { width:80px; height:80px; margin-bottom:0.6rem; }
+  h1 { font-size:2rem; margin-bottom:0.1rem; }
+  .name-divider { margin-bottom:0.5rem; }
+  .loc { margin-bottom:1rem; }
+  .btns { gap:0.4rem; }
+  .btn { height:48px; }
+  .footer { margin-top:1rem; }
 }
 </style>
 </head>
@@ -269,9 +278,9 @@ if (path === '/link2') { window.location.replace('LÄNK-2-HÄR'); }
   </div>
 
   <div class="btns">
-    <a class="btn btn-primary" href="https://wa.me/DITTTELEFONNUMMER" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>mitt nummer</a>
-    <a class="btn" href="INSTAGRAM-URL-HÄR" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>instagram</a>
-    <a class="btn" href="X-URL-HÄR" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>twitter</a>
+    <a class="btn btn-primary" href="http://wa.me/46728511458" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>mitt nummer</a>
+    <a class="btn" href="https://instagram.com/noradenstora" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>instagram</a>
+    <a class="btn" href="https://twitter.com/nora_denstora" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="margin-right:8px;flex-shrink:0"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>twitter</a>
   </div>
 
   <p class="footer">✦ pure luxury ✦</p>
